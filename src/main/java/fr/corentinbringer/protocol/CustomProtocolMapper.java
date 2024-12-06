@@ -130,7 +130,7 @@ public class CustomProtocolMapper extends AbstractOIDCProtocolMapper implements 
         String sqlQuery = """
             SELECT c.name, c.label
             FROM companies c
-            JOIN users u ON u.id = c.label
+            JOIN users u ON u.id = c.user_id
             WHERE u.username = ?
             """;
 
